@@ -31,10 +31,12 @@ import { sequelize } from "./db.js";
 
 
 export const Yuri = sequelize.define("yuri", {
+
   FirstName: { type: DataTypes.STRING, allowNull: false },
   LastName: { type: DataTypes.STRING, allowNull: false },
+  MiddleName: { type: DataTypes.STRING, allowNull: false },
   Program: { type: DataTypes.STRING, allowNull: false },
-  YearLevel: { type: DataTypes.INTEGER, allowNull: false },
+  YearLevel: { type: DataTypes.STRING, allowNull: false },
   Section: { type: DataTypes.STRING, allowNull: false },
 });
 export { sequelize };

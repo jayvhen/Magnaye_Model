@@ -31,8 +31,9 @@ import carRoutes from "./Carroutes.js";
 import phoneRoutes from "./Phoneroutes.js";
 import productRoutes from "./Productroutes.js";
 import yuriRoutes from "./Yuriroutes.js";
+import devicecontrollerRoutes from "./Devicecontrollerroutes.js"
 const router = express.Router();
-router.get("/", homePage);
+"router.get("/", homePage);"
 
 import { loginPage, registerPage, forgotPasswordPage, dashboardPage, loginUser, registerUser, logoutUser } from "../controllers/authController.js";
 
@@ -49,6 +50,18 @@ router.use("/car", carRoutes);
 router.use("/phone",phoneRoutes);
 router.use("/product", productRoutes);
 router.use("/yuri", yuriRoutes);
+router.use("/devicecontroller", devicecontrollerRoutes);
+
+
+import { add } from "../controllers/add.js";
+
+router.get("/", add.index);
+router.post("/insert", add.insert);
+router.get("/add", add.add);
+router.get("/edit/:id", add.edit);
+router.post("/update/:id", add.update);
+router.get("/delete/:id", add.delete)
+
 
 export default router;
 

@@ -7,6 +7,7 @@ import { Yuri } from "./models/Yuri.js";
 import { Car } from "./models/Car.js";
 import { Book } from "./models/Book.js";
 import { Phone } from "./models/Phone.js";
+import { Devicecontroller } from "./models/Devicecontroller.js";
 import inquirer from "inquirer";
 
 const rootSequelize = new Sequelize("mysql://root:@localhost:3306/");

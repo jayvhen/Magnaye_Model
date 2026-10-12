@@ -32,11 +32,11 @@ import { sequelize } from "./db.js";
 
 export const Phone = sequelize.define("phone", {
 
-  PhoneModel: { type: DataTypes.STRING, allowNull: false },
-  Color: { type: DataTypes.STRING, allowNull: false },
-  Specs: { type: DataTypes.STRING, allowNull: false },
-  Price: { type: DataTypes.FLOAT, allowNull: false },
-  StorageCapacity: { type: DataTypes.STRING, allowNull: false },
-  
+  FirstName: { type: DataTypes.STRING, allowNull: false },
+  LastName: { type: DataTypes.STRING, allowNull: false },
+  MiddleName: { type: DataTypes.STRING, allowNull: false },
+  Program: { type: DataTypes.STRING, allowNull: false },
+  YearLevel: { type: DataTypes.STRING, allowNull: false },
+  Section: { type: DataTypes.STRING, allowNull: false },
 });
 export { sequelize };
